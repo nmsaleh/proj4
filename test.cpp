@@ -107,10 +107,13 @@ int main() {
     Rectangle rectangle1;
     Rectangle rectangle2(pt1, pt2, color1);
     Rectangle rectangle3(pt1, pt2, color1, color2, color3, color4);
+    cout << rectangle1;
+    cout << rectangle2;
+    cout << rectangle3;
 
     rectangle1.setStart(pt3);
     rectangle1.setEnd(pt4);
-    rectangle1.setColor(color1);
+    rectangle2.setColor(color4);
     rectangle1.setColorTopLeft(color1);
     rectangle1.setColorTopRight(color2);
     rectangle1.setColorBottomRight(color3);
@@ -122,6 +125,7 @@ int main() {
 
     cin >> rectangle1;
     cout << rectangle1 << endl;
+    cout << rectangle2 << endl;
 
     return 0;
 }
