@@ -113,6 +113,7 @@ int main() {
 
     rectangle1.setStart(pt3);
     rectangle1.setEnd(pt4);
+    rectangle1.setColor(color2);
     rectangle2.setColor(color4);
     rectangle1.setColorTopLeft(color1);
     rectangle1.setColorTopRight(color2);
