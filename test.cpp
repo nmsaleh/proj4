@@ -46,6 +46,8 @@ int main() {
     cout << "Testing Line.cpp" << endl;
     Line ln1;
     Line ln2(pt1, pt2, color1);
+    cout << ln1 << endl;
+    cout << ln2 << endl;
 
     ln1.setStart(pt1);
     ln1.setEnd(pt2);
@@ -81,7 +83,7 @@ int main() {
 
 
     cout << "Testing Triangle.cpp" << endl;
-    Point v1;
+    Point v1(0,2);
     Point v2(5, 8);
     Point v3(12, 2);
     Color color3(0, 0, 255);
@@ -89,6 +91,9 @@ int main() {
     Triangle t1;
     Triangle t2(v1, v2, v3, color1);
     Triangle t3(v1, color1, v2, color2, v3, color3);
+    cout << t1 << endl;
+    cout << t2 << endl;
+    cout << t3 << endl;
 
     t1.setVertexOne(v1);
     t1.setVertexTwo(v2);
