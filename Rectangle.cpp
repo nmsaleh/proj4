@@ -100,11 +100,11 @@ Color Rectangle::getColorBottomLeft() {
 
 void Rectangle::read(istream& ins) {
     Color color;
-    ins >> start >> end >> color;
+    ins >> start >> end >> colorTopLeft >> colorTopRight
+        >> colorBottomRight >> colorBottomLeft;
     if (ins.fail()) {
         ins.clear();
-        ins >> start >> end >> colorTopLeft >> colorTopRight
-            >> colorBottomRight >> colorBottomLeft;
+        ins >> start >> end >> color;
     }
     else {
         colorTopLeft = color;
@@ -117,9 +117,10 @@ void Rectangle::read(istream& ins) {
 void Rectangle::write(ostream& outs) {
     if (colorTopLeft == colorTopRight && colorTopLeft == colorBottomRight && colorTopLeft == colorBottomLeft) {
         outs << start << " " << end << " " << colorTopLeft;
-    } else {
+    } 
+    else {
         outs << start << " " << end << " " << colorTopLeft << " " << colorTopRight
-            << " " << colorBottomRight << " " << colorBottomLeft;
+             << " " << colorBottomRight << " " << colorBottomLeft;
     }
 }
 
