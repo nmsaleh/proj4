@@ -21,14 +21,11 @@ using namespace std;
 //       setRadius, getRadius, read, write. - DONE
 
 Circle::Circle() {
-    center = Point();
-    radius = 0;
-    color = Color();
 }
 
 Circle::Circle(Point pt, int r, Color c) {
     center = pt;
-    radius = r;
+    radius = checkRadius(r);
     color = c;
 }
 
@@ -41,7 +38,7 @@ Point Circle::getCenter() {
 }
 
 void Circle::setRadius(int r) {
-    radius = r;
+    radius = checkRadius(r);
 }
 
 int Circle::getRadius() {
