@@ -17,9 +17,6 @@
 //       getEnd, setColor, getColor, read, write. -- DONE
 
 Line::Line() {
-    start = Point();
-    end = Point();
-    lineColor = Color();
 }
 
 Line::Line(Point pt1, Point pt2, Color color) {
