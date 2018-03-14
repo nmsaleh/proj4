@@ -99,24 +99,19 @@ Color Rectangle::getColorBottomLeft() {
 }
 
 void Rectangle::read(istream& ins) {
-    Color color;
     ins >> start >> end >> colorTopLeft >> colorTopRight
         >> colorBottomRight >> colorBottomLeft;
     if (ins.fail()) {
         ins.clear();
-        ins >> start >> end >> color;
-    }
-    else {
-        colorTopLeft = color;
-        colorTopRight = color;
-        colorBottomRight = color;
-        colorBottomLeft = color;
+        colorTopRight = colorTopLeft;
+        colorBottomRight = colorTopLeft;
+        colorBottomLeft = colorTopLeft;
     }
 }
 
 void Rectangle::write(ostream& outs) {
-    outs << start << " " << end << " " << colorTopLeft << " " << colorTopRight
-         << " " << colorBottomRight << " " << colorBottomLeft;
+    outs << " " << start << " " << end << " " << colorTopLeft << " "
+         << colorTopRight << " " << colorBottomRight << " " << colorBottomLeft;
 }
 
 // Your code goes above this line.
