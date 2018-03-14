@@ -70,7 +70,7 @@ int main() {
 
     c1.setCenter(center);
     c1.setRadius(2);
-    c1.setRadius(0);
+    c1.setRadius(-3);
     c1.setColor(color1);
 
     cout << c1.getCenter() << " " << c1.getRadius() << " " << c1.getColor()
