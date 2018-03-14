@@ -129,8 +129,12 @@ int main()
 
 void writeFile(const Graphics& drawer)
 {
-    // TODO: implement
-    // This will make use of Graphics::writeFile()
+    string fileName;
+    cin >> fileName;
+    fileName += ".bmp";
+    
+    drawer.writeFile(fileName);
+    cout << "[Wrote " << fileName << "]" << endl;
 }
 
 void loadFile(Graphics& drawer)
