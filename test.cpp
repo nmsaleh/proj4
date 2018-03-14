@@ -63,8 +63,10 @@ int main() {
     int r = 4;
     Circle c1;
     Circle c2(center, r, color1);
+    Circle c3(center, -6, color1);
     cout << c1 << endl;
     cout << c2 << endl;
+    cout << c3 << endl;
 
     c1.setCenter(center);
     c1.setRadius(2);
