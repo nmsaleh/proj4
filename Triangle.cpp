@@ -23,12 +23,6 @@ using namespace std;
 //       read, write.
 
 Triangle::Triangle() {
-    vertexOne = Point();
-    vertexTwo = Point();
-    vertexThree = Point();
-    vertexOneColor = Color();
-    vertexTwoColor = Color();
-    vertexThreeColor = Color();
 }
 
 Triangle::Triangle(Point pt1, Point pt2, Point pt3, Color color) {
