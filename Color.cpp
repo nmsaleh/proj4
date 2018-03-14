@@ -48,9 +48,11 @@ int Color::getBlue() {
 }
 
 void Color::read(istream& ins) {
-    ins >> red;
-    ins >> green;
-    ins >> blue;
+    int redc, greenc, bluec;
+    ins >> redc >> greenc >> bluec;
+    setRed(redc);
+    setGreen(greenc);
+    setBlue(bluec);
 }
 
 void Color::write(ostream& outs) {
