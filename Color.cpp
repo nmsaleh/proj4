@@ -1,81 +1,64 @@
 /**
  * Color.cpp
+ * Project UID 2e6ea4e086ea6a06753e819c30923369
  *
- * EECS 183, Winter 2018
+ * EECS 183
  * Project 4: CoolPics
  *
- * Lewis Conklin, Noah Saleh
- * lewislc, nmsaleh
+ * Finn Ward
+ * finnward
  *
- * The color class
+ * color.cpp Project 4
  */
 
 #include "Color.h"
-
-// TODO: implement first checkRange, then two constructors, setRed, getRed,
-//       setGreen, getGreen, setBlue, getBlue, read, write.
 Color::Color() {
 }
-
-Color::Color(int redVal, int greenVal, int blueVal) {
+Color::Color(int redVal, int greenVal, int blueVal){
     red = checkRange(redVal);
     green = checkRange(greenVal);
     blue = checkRange(blueVal);
 }
 
 void Color::setRed(int redVal) {
-    red = checkRange(redVal);
+    red = checkRange(red);
 }
-
 void Color::setGreen(int greenVal) {
-    green = checkRange(greenVal);
+    green = checkRange(red);
 }
-
 void Color::setBlue(int blueVal) {
-    blue = checkRange(blueVal);
+    blue = checkRange(blue);
 }
-
-int Color::getRed() {
+int Color::getRed(){
     return red;
 }
-
-int Color::getGreen() {
+int Color::getGreen(){
     return green;
 }
-
-int Color::getBlue() {
+int Color::getBlue(){
     return blue;
 }
-
-void Color::read(istream& ins) {
+void Color::read(istream& ins){
     int redc, greenc, bluec;
     ins >> redc >> greenc >> bluec;
     setRed(redc);
     setGreen(greenc);
     setBlue(bluec);
 }
-
-void Color::write(ostream& outs) {
-    outs << red << "  " << green << "  " << blue;
+void Color::write(ostream& outs){
+    outs << red << " " << green << " " << blue;
 }
-
-int Color::checkRange(int val) {
-    if (val >= 0 && val <= 255) {
-        return val;
-    }
-    else {
-        if (val < 0) {
+int Color::checkRange(int x){
+    if(x >= 0 && x <= 255){
+        return x;
+    } else{
+        if(x < 0) {
             return 0;
-        }
-        else {
+        } else{
             return 255;
         }
     }
 }
-
-// Your code goes above this line.
-// Don't change the implementations below!
-
 istream& operator >> (istream& ins, Color& color)
 {
    color.read(ins);
