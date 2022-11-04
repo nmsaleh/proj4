@@ -1,13 +1,14 @@
 /**
  * Graphics.cpp
+ * Project UID 2e6ea4e086ea6a06753e819c30923369
  *
- * EECS 183, Winter 2018
+ * EECS 183
  * Project 4: CoolPics
  *
- * Lewis Conklin, Noah Saleh
- * lewislc, nmsaleh
+ * Finn Ward
+ * finnward
  *
- * The graphics class
+ * graphics.cpp Project 4
  */
 
 #include <iostream>
@@ -18,36 +19,30 @@
 
 #include "Graphics.h"
 #include "bmp.h"
-#include "utility.h"
 
 using namespace std;
 
 // TODO: implement constructor, clear, setPixel, initArray.
 
-Graphics::Graphics() {
+Graphics::Graphics(){
     initArray();
 }
-
-void Graphics::clear() {
+void Graphics::clear(){
     initArray();
 }
-
 void Graphics::setPixel(int x, int y, Color color) {
-    if (x > -1 && y > -1 && x < DIMENSION && y < DIMENSION) {
+    if(x < DIMENSION && y < DIMENSION && x > -1 && y > -1) {
         pixelData[y][x] = color;
     }
 }
-
-void Graphics::initArray() {
+void Graphics::initArray(){
     Color black;
-
-    for (int i = 0; i < DIMENSION; i++) {
-        for (int j = 0; j < DIMENSION; j++) {
-            pixelData[i][j] = black;
+    for(int i = 0; i < DIMENSION; i++){
+        for(int j = 0; j < DIMENSION; j++){
+            pixelDAta[i][j] = black;
         }
     }
 }
-
 // Your code goes above this line.
 // Don't change the implementation below!
 
